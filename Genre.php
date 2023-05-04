@@ -1,6 +1,6 @@
 <?php
 
-    class Producer {
+    class Genre {
         public $type;
 
 
