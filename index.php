@@ -12,6 +12,7 @@
             $this->score = $score;
             $this->length = $length;
             $this->producer = $producer;
+            $this->$genres = $genres;
 
             
             foreach ($genres as $genre) {
