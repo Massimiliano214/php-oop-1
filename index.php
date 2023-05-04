@@ -69,14 +69,14 @@
     var_dump($avengers);
 
     echo $avengers->getInfo();
-    echo $avengers->getGenre();
+    echo $genreAvengers->getGenre();
     ?>
     <br>
     <?php
     echo $avatar->getInfo();
-    echo $avatar->getGenre();
+    echo $genreAvatar->getGenre();
     ?>
     <br>
     <?php
     echo $pirates_of_the_caribbean->getInfo();
-    echo $pirates_of_the_caribbean->getGenre();
+    echo $genreCaribbean->getGenre();
