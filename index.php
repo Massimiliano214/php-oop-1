@@ -1,46 +1,8 @@
 <?php
 
-    class Movie {
-        public $name;
-        public $score;
-        public $length;    
-        public $genres;
-
-        public function __construct($name, $score, $length, $producer, array $genres)
-        {
-            $this->name = $name;
-            $this->score = $score;
-            $this->length = $length;
-            $this->producer = $producer;
-            $this->$genres = $genres;
-
-            
-            foreach ($genres as $genre) {
-                if (!$genre instanceof Genre) {
-                    echo 'Ogni genere deve essere una instanza della classe Genre!';
-                    die();
-                }
-            }
-            
-        }
-
-        public function getInfo() {
-            return $this->name . " " . $this->score . " " . $this->length . " " . $this->producer;
-        }
-        
-        public function getGenre() {
-            $generi = '';
-
-            foreach($this->genres as $genre) {
-                $generi .= $genre->type;
-            }
-
-            return $generi;
-        }
-        
-    }
     
-    require __DIR__ . '/Genre.php';
+    require __DIR__ . '/Models/Movie.php';
+    require __DIR__ . '/Models/Genre.php';
 
     $genreAvengers = [
         new Genre('SuperHeros'),
@@ -69,14 +31,14 @@
     var_dump($avengers);
 
     echo $avengers->getInfo();
-    echo $genreAvengers->getGenre();
+    echo $avengers->getGenre();
     ?>
     <br>
     <?php
     echo $avatar->getInfo();
-    echo $genreAvatar->getGenre();
+    echo $avatar->getGenre();
     ?>
     <br>
     <?php
     echo $pirates_of_the_caribbean->getInfo();
-    echo $genreCaribbean->getGenre();
+    echo $pirates_of_the_caribbean->getGenre();
